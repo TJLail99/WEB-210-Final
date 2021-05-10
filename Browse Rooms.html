@@ -1,0 +1,252 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<style>
+
+ *{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family: 'roboto', sans-serif;
+    letter-spacing:1.5px;
+    font-weight:600;
+ }   
+
+header{
+    display:flex;
+    min-height:10vh;
+    width:auto;
+    background-color:#003366;
+    border:solid black 3px;
+    flex-wrap:wrap;
+}
+ul{
+    margin-left:auto;
+   
+    padding-top:60px;
+}
+li{
+    padding-left:40px;
+    padding-right:40px;
+    font-size:3vh;
+    font-weight:600;
+}
+header li{
+    display:inline;
+
+}
+a:link {
+    color:white;
+}
+a:active{
+    color:black;
+}
+a:hover{
+    color:#70D1EF;
+}
+a:visited{
+    color:white;
+}
+
+a:visited:hover
+{
+    color:#70D1EF;
+}
+.logo{
+    width:auto;
+    height:10vh;
+    margin-right:auto;
+    padding-left:1.5vw;
+    
+    
+}
+.house{
+    padding-right:20px;
+    height:9.5vh;
+}
+
+
+   
+
+section{
+    min-height:35vh;
+    width:auto;
+    background-color:white;
+    border: solid black 3px;
+    border-top:none;
+    flex-wrap:wrap;
+
+  
+}
+
+
+.smallpic{
+    padding-left:40px;
+    padding-bottom: 40px;
+    padding-top:20px;
+    padding-right:40px;
+    height:30vh;
+    width:auto;
+    transition:transform .5s;
+    
+
+}
+.smallpic:hover{
+    transform:scale(1.2);
+    
+}
+
+h2{
+    color:#003366;
+    padding-top:3vh;
+    padding-left:2vw;
+    font-size:3vh;
+    
+}
+
+@media only screen and (max-width: 1000px) {
+    li{
+        font-size: 2vh;
+        padding-left:20px;
+    }
+  
+}
+</style>
+
+<title>
+
+Browse Rooms
+
+</title>
+
+<header>
+
+<a href="Home Page.html"> <img src="pictures/T House Logo.png" alt = "logo" class = "logo animate__animated"></a>
+
+
+<ul class="nav justify-content-center">
+
+    <li class="nav-item">
+  
+      <a class="nav-link animate__animated" href="Home Page.html">Home</a>
+  
+    </li>
+  
+    <li class="nav-item">
+  
+      <a class="nav-link animate__animated" href="Browse Rooms.html">Browse Rooms</a>
+  
+    </li>
+  
+    <li class="nav-item">
+  
+      <a class="nav-link animate__animated" href="Personal Room.html">Your Room</a>
+  
+    </li>
+  
+    
+    
+  
+  </ul>
+
+<a href="Personal Room.html"> <img src="pictures/T House.png" alt = "house" class = "house"/></a>
+
+
+</header>
+
+
+</head>
+
+<body>
+
+<main>
+
+
+
+</main>
+
+<section class = "flex-container">
+
+<h2>Trending Rooms</h2>    
+
+<a href="%"> <img src = "pictures/vid5.png" alt = "vid5" class = "smallpic"/></a>
+    
+<a href="^"> <img src = "pictures/vid6.png" alt = "vid6" class = "smallpic"/></a>
+    
+<a href="&"> <img src = "pictures/vid7.png" alt = "vid7" class = "smallpic"/></a>
+    
+<a href="*"> <img src = "pictures/vid8.png" alt = "vid8" class = "smallpic"/></a>
+
+
+</section>
+
+<section class = "flex-container">
+
+<h2>Friend's Rooms</h2>    
+    
+<a href="*"> <img src = "pictures/vid8.png" alt = "vid8" class = "smallpic"/></a>
+
+<a href="$"> <img src = "pictures/vid4.png" alt = "video 4" class = "smallpic"/></a>
+
+<a href="@"> <img src = "pictures/trend2.png" alt = "trend2" class = "smallpic"/></a>
+
+<a href="&"> <img src = "pictures/vid7.png" alt = "vid7" class = "smallpic"/></a>
+
+
+
+    
+</section>
+
+<section class = "flex-container">
+
+<h2>Random Rooms</h2>    
+        
+<a href="%"> <img src = "pictures/vid12.png" alt = "vid12" class = "smallpic"/></a>
+        
+<a href="^"> <img src = "pictures/vid9.png" alt = "vid9" class = "smallpic"/></a>
+        
+<a href="&"> <img src = "pictures/vid10.png" alt = "vid10" class = "smallpic"/></a>
+        
+<a href="*"> <img src = "pictures/vid11.png" alt = "vid11" class = "smallpic"/></a>
+        
+</section>
+
+
+<script type="text/javascript">
+
+
+var links = document.querySelectorAll("a");
+
+   let addBeat = function() {
+       this.classList.add("animate__heartBeat")
+   }
+
+   let removeBeat = function() {
+       this.classList.remove("animate__heartBeat")
+   }
+
+   for(var i = 0; i < links.length; i++){
+       links[i].addEventListener("mouseover", addBeat, false);
+       links[i].addEventListener("mouseout", removeBeat, false);
+       
+   }
+
+
+
+
+
+</script>
+
+</body>
+
+
+</html>

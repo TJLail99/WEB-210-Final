@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<style>
+
+ *{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family: 'roboto', sans-serif;
+    letter-spacing:1.5px;
+ }   
+
+header{
+    display:flex;
+    min-height:10vh;
+    width:auto;
+    background-color:#003366;
+    border:solid black 3px;
+    flex-wrap:wrap;
+}
+ul{
+    margin-left:auto;
+    padding-top:60px;
+}
+li{
+    padding-left:40px;
+    padding-right:40px;
+    font-size:3vh;
+    font-weight:600;
+}
+@media only screen and (max-width: 1000px) {
+    li{
+        font-size: 2vh;
+        padding-left:20px;
+    }
+}    
+header li{
+    display:inline;
+
+}
+a:link {
+    color:white;
+}
+a:active{
+    color:black;
+}
+a:hover{
+    color:#70D1EF;
+}
+a:visited{
+    color:white;
+}
+
+a:visited:hover
+{
+    color:#70D1EF;
+}
+.logo{
+    width:auto;
+    height:10vh;
+    margin-right:auto;
+    padding-left:1.5vw;
+    
+}
+.house{
+    padding-right:20px;
+    height:9.5vh;
+}
+
+main{
+    height:900px ;
+    width:auto;
+    background-color:#003366;
+    border:solid black 3px;
+    border-top:none;
+    display:flex;
+}
+
+
+.smallpic{
+    padding-left:40px;
+    padding-bottom: 40px;
+    padding-top:20px;
+    padding-right:40px;
+    height:30vh;
+    width:auto;
+    transition:transform .5s;
+
+}
+.smallpic:hover{
+    transform:scale(1.2);
+}
+
+h2{
+    color:white;
+    padding-top:3vh;
+    padding-left:2vw;
+    font-size:3vh;
+}
+
+.room{
+    padding-left:2vw;
+    height:900px;
+    width:1500px;
+}
+
+.chat{
+    height:900px;
+    width:400px;
+}
+@media only screen and (max-width:1200px) {
+    .room{
+        height:450px;
+        width:800px;
+    }
+    .chat{
+        height:450px;
+        width:200px;
+    }
+   
+}
+
+
+</style>
+
+<title>
+
+Your T-Room
+
+</title>
+
+<header>
+
+<a href="Home Page.html"> <img src="pictures/T House Logo.png" alt = "logo" class = "logo animate__animated"></a>
+
+
+<ul class="nav justify-content-center">
+
+    <li class="nav-item">
+  
+      <a class="nav-link animate__animated" href="Home Page.html">Home</a>
+  
+    </li>
+  
+    <li class="nav-item">
+  
+      <a class="nav-link animate__animated" href="Browse Rooms.html">Browse Rooms</a>
+  
+    </li>
+  
+    <li class="nav-item">
+  
+      <a class="nav-link animate__animated" href="Personal Room.html">Your Room</a>
+  
+    </li>
+  
+    
+    
+  
+  </ul>
+
+<a href="Personal Room.html"> <img src="pictures/T House.png" alt = "house" class = "house"/></a>
+
+
+</header>
+
+
+</head>
+
+<body>
+
+<main>
+    
+    <video class = "room" controls>
+        <source src="baby.mp4" type="video/mp4">
+        <source src="baby.ogg" type="video/ogg">
+      Your browser does not support the video tag.
+      </video>
+
+    
+
+    <img src = "pictures/chat.png" alt = "chat" class = "chat"/>
+
+
+</main>
+
+
+
+<script type="text/javascript">
+
+
+var links = document.querySelectorAll("a");
+
+   let addBeat = function() {
+       this.classList.add("animate__heartBeat")
+   }
+
+   let removeBeat = function() {
+       this.classList.remove("animate__heartBeat")
+   }
+
+   for(var i = 0; i < links.length; i++){
+       links[i].addEventListener("mouseover", addBeat, false);
+       links[i].addEventListener("mouseout", removeBeat, false);
+       
+   }
+
+
+
+var l = document.querySelector("#l");
+var r = document.querySelector("#r");
+var one = document.querySelector("#c1");
+var two = document.querySelector("#c2");
+var thr = document.querySelector("#c3");
+
+
+var bgs = ["https://res.cloudinary.com/dnd0inkht/image/upload/v1606858968/trend1_jdknvw.png", "https://res.cloudinary.com/dnd0inkht/image/upload/v1606858969/trend2_myvxik.png", "https://res.cloudinary.com/dnd0inkht/image/upload/v1606858970/trend3_ku7ivp.png"]
+
+one.style.backgroundImage = "url(" + bgs[0] + ")";
+two.style.backgroundImage = "url(" + bgs[1] + ")";
+thr.style.backgroundImage = "url(" + bgs[2] + ")";
+
+l.onclick = function() {
+  var t = bgs[2];
+  bgs.pop();
+  bgs.unshift(t);
+  
+  one.style.backgroundImage = "url(" + bgs[0] + ")";
+  two.style.backgroundImage = "url(" + bgs[1] + ")";
+  thr.style.backgroundImage = "url(" + bgs[2] + ")";
+  
+  display();
+  
+}
+
+r.onclick = function() {
+  const firstItem = bgs.shift();
+  bgs.push(firstItem);
+  
+  one.style.backgroundImage = "url(" + bgs[0] + ")";
+  two.style.backgroundImage = "url(" + bgs[1] + ")";
+  thr.style.backgroundImage = "url(" + bgs[2] + ")";
+  
+
+}
+
+
+
+</script>
+
+</body>
+
+
+</html>
